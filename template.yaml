@@ -1,335 +1,1053 @@
 theme: default # default || classic || dark
-organization: Pixel Genius Labs
-twitter: '@denkivvakame'
-title: Academic Project Page Template
-journal: "AAAA'24"
+organization: The University of Hong Kong
+# twitter: '@denkivvakame'
+title: Visual Spatial Tuning
+# journal: "AAAA'24"
 resources:
   paper: # https://openreview.net/
   arxiv: https://arxiv.org
   code: https://github.com/denkiwakame/academic-project-template
   video: https://www.youtube.com/embed/onbnb_D1wC8?si=xJczUv716Lt5aO4l&amp;start=1150
-  demo: https://colab.research.google.com/
+  # demo: https://colab.research.google.com/
   huggingface: https://huggingface.co/
-description: academic projectpage template that supports markdown and KaTeX
+description: Project page for VST
 
-image: https://denkiwakame.github.io/academic-project-template/teaser.jpg
+image: assets/teaser_project_page.jpg
 url: https://denkiwakame.github.io/academic-project-template
 speakerdeck: # speakerdeck slide ID
 authors:
-  - name: Wakame Denki*
-    affiliation: [1, 2]
-    url: http://denkiwakame.github.io/
+  - name: Rui Yang*
+    affiliation: [1]
+    url: https://yangr116.github.io/
     position: intern
-  - name: Jane Doe
+  - name: Ziyu Zhu*
+    affiliation: [3]
+    position: intern
+    url: https://scholar.google.com/citations?user=Zhh8nbQAAAAJ&hl=en
+  - name: Yanwei Li
+    affiliation: [2, †]
+    position: Researcher
+    url: https://yanwei-li.com/
+  - name: Jingjia Huang
+    affiliation: [2]
+    position: Researcher
+    url: xxx
+  - name: Shen Yan
+    affiliation: [2]
+    position: Researcher
+    url: xxx
+  - name: Siyuan Zhou
+    affiliation: [2]
+    position: Researcher
+    url: xxx
+  - name: Zhe Liu
     affiliation: [1]
     position: Researcher
-    url: https://thispersondoesnotexist.com/
-  - name: John Smith
-    affiliation: [1]
+    url: xxx
+  - name: Xiangtai Li
+    affiliation: [2]
     position: Researcher
-    url: https://thispersondoesnotexist.com/
+    url: xxx
+  - name: Shuangye Li
+    affiliation: [2]
+    position: Researcher
+    url: xxx
+  - name: Wenqian Wang
+    affiliation: [2]
+    position: Researcher
+    url: xxx
+  - name: Yi Lin
+    affiliation: [2, §]
+    position: Researcher
+    url: xxx
+  - name: Guang Shi
+    affiliation: [2]
+    position: Researcher
+    url: xxx
+  - name: Hengshuang Zhao
+    affiliation: [1, §]
+    position: Researcher
+    url: https://hszhao.github.io/
 affiliations:
-  - Pixel Genius Labs
-  - NeuroNauts Academy
+  - The University of Hong Kong
+  - ByteDance Seed
+  - Tsinghua University
 meta:
-  - '*work done while she was interning at Pixel Genius Lab.'
+  - '* Equal contribution, † Project leader, § Correspondence'
 bibtex: >
-  @article{doe2024superai,
-    author    = {Jane Doe and John Smith},
-    title     = {Unleashing the Power of Super AI: Transforming the Future of Technology},
-    journal   = {Journal of Superintelligent Systems},
-    year      = {2024},
-    volume    = {99},
-    number    = {1},
-    pages     = {1-42},
-    month     = {January},
-    keywords  = {Super AI, Machine Learning, Artificial Intelligence, Technological Innovation},
-    doi       = {10.9999/jsis.2024.001},
-    url       = {https://www.example.com/superai-article},
-    note      = {This paper sets the benchmark for future AI research and applications.}
+  @article{vst,
+    title={Visual Spatial Tuning},
+    author={Rui Yang, Ziyu Zhu, Yanwei Li, Jingjia Huang, Shen Yan, Siyuan Zhou, Zhe Liu, Xiangtai Li, Shuangye Li, Wenqian Wang, Yi Lin, Guang Shi, Hengshuang Zhao},
+    journal={arXiv preprint arXiv:xxx},
+    year={2025}
   }
 
-teaser: teaser.jpg
+teaser: assets/teaser_project_page.jpg
 abstract: |
-  This is a versatile template designed to satisfy your research project page needs, all while harnessing the power of 🎨**UIKit** and ⚛ **React**. Built on the foundations of simplicity and flexibility, this template allows you to focus on expressing your ideas without the hassle of directly handling CSS—thanks to customizable SASS variables.
-  With markdown as your canvas and $\KaTeX$ for precise equations, crafting clear and engaging project page becomes effortless. Whether you're unraveling complex theories or presenting your findings, this template aims to support your scholarly endeavors with grace and ease.
-  *Need to edit HTML directly?* Fear not! In addition to markdown, you can also directly write HTML with ease. Feel empowered to craft your content exactly as you envision it, whether through markdown's simplicity or the precision of HTML.
+  Capturing spatial relationships from visual inputs is a cornerstone of human-like general intelligence. 
+  Several previous studies have tried to enhance the spatial awareness of Vision-Language Models (VLMs) by adding extra expert encoders, which brings extra overhead and usually harms general capabilities. 
+  To enhance the spatial ability in general architectures, we introduce ***Visual Spatial Tuning (VST)***, a comprehensive framework to cultivate VLMs with human-like visuospatial abilities, from spatial perception to reasoning.  
+  **(1)** We first attempt to enhance spatial perception in VLMs by constructing a large-scale dataset termed **VST-P**, which comprises 4.1 million samples spanning 19 skills across single views, multiple images, and videos.  
+  **(2)** Then, we present **VST-R**, a curated dataset with 135K samples that instruct models to reason in space.  
+  **(3)** In particular, we adopt **a progressive training pipeline**: supervised fine-tuning to build foundational spatial knowledge, followed by reinforcement learning to further improve spatial reasoning abilities.  
+  Without the side-effect to general capabilities, the proposed VST consistently achieves state-of-the-art results on several spatial benchmarks, including $36.9\%$ on MMSI-Bench and $60.6\%$ on VSI-Bench. 
+  It turns out that the Vision-Language-Action models can be significantly enhanced with the proposed spatial tuning paradigm, paving the way for more physically grounded AI. 
 
 body:
-  - title: Media examples
+  - title: Dataset
     text: |
-      ### Mediafile Path
-      Files in `public/` can be referenced directly: `<img src="001.jpg" />`
-
-      ### UIKit Components
-      This template supports all UIKit components.
-      To check available components, refer to the [UIKit documentation](https://getuikit.com/docs).
-      [Slideshow](https://getuikit.com/docs/slideshow) example
-
-      </div>
-      <div uk-slideshow="animation: push">
-        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-          <div class="uk-slideshow-items">
-            <div>
-              <img src="001.jpg" alt="" uk-cover>
-            </div>
-            <div>
-              <img src="002.jpg" alt="" uk-cover>
-            </div>
-            <div>
-              <img src="003.jpg" alt="" uk-cover>
-            </div>
-          </div>
-          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
-          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
-        </div>
-        <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
-      </div>
-
-      [Grid system](https://getuikit.com/docs/grid) example
-      <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-3@m" uk-grid>
         <div>
-          <img src="001.jpg">
-          <span class="uk-text-meta">Fig1 - caption example</figcaption>
+          <img src="assets/dataset.jpg">
+          <span class="uk-text-meta">Overview of the VST dataset. (a) The distribution of VST-P, which is used for SFT. (b) The distribution of VST-R, which is used for CoT cold start and RL. `SR' denotes spatial reasoning, and `GR' denotes general reasoning.</figcaption>
         </div>
-        <div>
-          <img src="002.jpg" />
-          <span class="uk-text-meta">Fig2 - caption example</figcaption>
-        </div>
-        <div>
-          <img src="003.jpg">
-          <span class="uk-text-meta">Fig3 - caption example</figcaption>
-        </div>
-      </div>
 
-      [Video](https://getuikit.com/docs/video) and [Slider](https://getuikit.com/docs/slider) component example
-      <div uk-slider>
-        <div class="uk-slider-items uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m uk-grid">
-          <div>
-            <video
-              src="https://yootheme.com/site/images/media/yootheme-pro.mp4"
-              loop
-              muted
-              uk-video="autoplay:inview"
-              />
-          </div>
-          <div>
-            <video
-              src="https://yootheme.com/site/images/media/yootheme-pro.mp4"
-              loop
-              muted
-              uk-video="autoplay:inview"
-              />
-          </div>
-          <div>
-            <video
-              src="https://yootheme.com/site/images/media/yootheme-pro.mp4"
-              loop
-              muted
-              uk-video="autoplay:inview"
-              />
-          </div>
-        </div>
-        <div class="uk-flex uk-flex-center uk-margin-small">
-          <a class="uk-icon-button" href uk-slidenav-previous uk-slider-item="previous"></a>
-          <a class="uk-icon-button uk-margin-small-left" href uk-slidenav-next uk-slider-item="next"></a>
-        </div>
-      </div>
+        ### VST-Perception (VST-P)
+        The VST-P dataset contains **4.1 M** samples across **19** different tasks for supervised fine-tuning, covering three primary vision scenarios, i.e., single-image, multi-image, and video.
+        The VLM tuned on this dataset exhibits significantly enhanced fundamental spatial perception capabilities. 
+        Notably, there is a *~20%* improvement on CVBench-3D, a *~5%* increase on BLINK, and a *~16%* gain on VSIBench.
+        
+        ### VST-Reasoning (VST-R)
+        The VST-R dataset contains 135K samples with two parts: **one part** includes CoT steps to teach the model how to reason, and **the other** part provides rule-checkable data used in online RL to improve the reasoning ability. 
+        The VLM tuned on this dataset demonstrates significantly enhanced spatial reasoning abilities. There is an *8.9%* improvement on MMSI-Bench.
 
-      [Image-Comparison-Slider](https://img-comparison-slider.sneas.io) example
-      <img-comparison-slider>
-        <img slot="first" src="002.jpg" />
-        <img slot="second" src="004.jpg" />
-      </img-comparison-slider>
-
-  - title: Markdown examples
+  - title: Results
     text: |
-      Here's our demo text showcasing the power of markdown and KaTeX integration!
-      Markdown allows you to easily format text using simple syntax.
-      - **bold**
-      - *italic*
-      - `inline code`.
+      ### Comparison with state-of-the-art VLMs on spatial benchmarks and general benchmarks.
 
-      You can also create headings of various levels:
-      # Heading Level 1
-      ## Heading Level 2
-      ### Heading Level 3
-      #### Heading Level 4
-      Markdown allows you to create tables like the following:
-      ### Fictitious AI Benchmark Results
-      | **Model Name** | **Accuracy (%)** ⬆️| **Inference Time (ms)** ⬇️|
-      |---------------------|--------------|---------------------|
-      | TransGPT-XT         | 96.3         | $\infty$                 |
-      | GigaBERT Prime      | 94.7         | 9.5                 |
-      | MegaLSTM-Pro        | 92.5         | 10.1                |
-      | UltraTransformer    | 97.1         | 7.8                 |
-      | **QuantumDNN-ALPHA**    | 95.8         | 8.5             |
+      *VST exhibits superior performance in spatial perception and reasoning while maintaining strong competitiveness in general multi-modal understanding.*
 
-      Of course, you can also directly write tables in HTML if needed. For more details, refer to the [UIKit Table documentation](https://getuikit.com/docs/table).
+      <div class="uk-overflow-auto">
+           <table class="uk-table uk-table-small uk-text-small uk-table-divider">
+              <!-- 表头 -->
+              <thead>
+                  <tr>
+                      <!-- 第一列，左对齐 -->
+                      <th class="uk-text-left">Models</th>
+                      <!-- 表头单元格，居中对齐 -->
+                      <th class="uk-text-center">CV</th>
+                      <th class="uk-text-center">3DSR</th>
+                      <th class="uk-text-center">MMSI</th>
+                      <th class="uk-text-center">BLINK</th>
+                      <th class="uk-text-center">VSI</th>
+                      <th class="uk-text-center">MMStar</th>
+                      <th class="uk-text-center">MMB</th>
+                      <th class="uk-text-center">RealworldQA</th>
+                      <th class="uk-text-center">MMMU</th>
+                      <th class="uk-text-center">OCRBench</th>
+                      <th class="uk-text-center">AI2D</th>
+                  </tr>
+              </thead>
+              <!-- 表格主体 -->
+              <tbody>
+                  <!-- 第一部分：基准模型 -->
+                  <tr>
+                      <td class="uk-text-left">GPT-4o</td>
+                      <td class="uk-text-center">76.0</td>
+                      <td class="uk-text-center">45.3</td>
+                      <td class="uk-text-center">30.3</td>
+                      <td class="uk-text-center">65.9</td>
+                      <td class="uk-text-center">34.0</td>
+                      <td class="uk-text-center">65.1</td>
+                      <td class="uk-text-center">84.3</td>
+                      <td class="uk-text-center">76.2</td>
+                      <td class="uk-text-center">70.7</td>
+                      <td class="uk-text-center">80.6</td>
+                      <td class="uk-text-center">84.9</td>
+                  </tr>
+                  <tr>
+                      <td class="uk-text-left">Gemini-2.5-Pro</td>
+                      <td class="uk-text-center">-</td>
+                      <td class="uk-text-center">-</td>
+                      <td class="uk-text-center">36.9</td>
+                      <td class="uk-text-center">70.6</td>
+                      <td class="uk-text-center">-</td>
+                      <td class="uk-text-center">77.5</td>
+                      <td class="uk-text-center">90.1</td>
+                      <td class="uk-text-center">78.0</td>
+                      <td class="uk-text-center">81.7</td>
+                      <td class="uk-text-center">86.6</td>
+                      <td class="uk-text-center">88.4</td>
+                  </tr>
+                  <tr>
+                      <td class="uk-text-left">Seed1.5-VL</td>
+                      <td class="uk-text-center">85.2</td>
+                      <td class="uk-text-center">61.6</td>
+                      <td class="uk-text-center">29.7</td>
+                      <td class="uk-text-center">72.1</td>
+                      <td class="uk-text-center">41.5</td>
+                      <td class="uk-text-center">77.8</td>
+                      <td class="uk-text-center">89.9</td>
+                      <td class="uk-text-center">78.4</td>
+                      <td class="uk-text-center">77.9</td>
+                      <td class="uk-text-center">86.1</td>
+                      <td class="uk-text-center">87.3</td>
+                  </tr>
+                  <!-- 第二部分：其他模型 -->
+                  <tr>
+                      <td class="uk-text-left">LLava-OneVision-7B</td>
+                      <td class="uk-text-center">61.9</td>
+                      <td class="uk-text-center">54.4</td>
+                      <td class="uk-text-center">26.6</td>
+                      <td class="uk-text-center">48.2</td>
+                      <td class="uk-text-center">32.4</td>
+                      <td class="uk-text-center">61.7</td>
+                      <td class="uk-text-center">80.8</td>
+                      <td class="uk-text-center">66.3</td>
+                      <td class="uk-text-center">48.8</td>
+                      <td class="uk-text-center">62.2</td>
+                      <td class="uk-text-center">81.4</td>
+                  </tr>
+                  <tr>
+                      <td class="uk-text-left">Qwen2.5-VL-3B</td>
+                      <td class="uk-text-center">71.8</td>
+                      <td class="uk-text-center">50.2</td>
+                      <td class="uk-text-center">26.5</td>
+                      <td class="uk-text-center">47.6</td>
+                      <td class="uk-text-center">29.6</td>
+                      <td class="uk-text-center">55.9</td>
+                      <td class="uk-text-center">79.9</td>
+                      <td class="uk-text-center">65.4</td>
+                      <td class="uk-text-center">47.9</td>
+                      <td class="uk-text-center">79.7</td>
+                      <td class="uk-text-center">81.6</td>
+                  </tr>
+                  <tr>
+                      <td class="uk-text-left">Qwen2.5-VL-7B</td>
+                      <td class="uk-text-center">75.4</td>
+                      <td class="uk-text-center">53.2</td>
+                      <td class="uk-text-center">25.9</td>
+                      <td class="uk-text-center">56.4</td>
+                      <td class="uk-text-center">38.9</td>
+                      <td class="uk-text-center">63.9</td>
+                      <td class="uk-text-center">83.5</td>
+                      <td class="uk-text-center">68.5</td>
+                      <td class="uk-text-center">58.6</td>
+                      <td class="uk-text-center">86.4</td>
+                      <td class="uk-text-center">83.9</td>
+                  </tr>
+                  <tr>
+                      <td class="uk-text-left">InternVL3-8B</td>
+                      <td class="uk-text-center">81.0</td>
+                      <td class="uk-text-center">55.7</td>
+                      <td class="uk-text-center">25.7</td>
+                      <td class="uk-text-center">55.5</td>
+                      <td class="uk-text-center">42.1</td>
+                      <td class="uk-text-center">68.2</td>
+                      <td class="uk-text-center">83.4</td>
+                      <td class="uk-text-center">70.8</td>
+                      <td class="uk-text-center">62.7</td>
+                      <td class="uk-text-center">88.0</td>
+                      <td class="uk-text-center">85.2</td>
+                  </tr>
+                  <tr>
+                      <td class="uk-text-left">MiMo-VL-7B-RL</td>
+                      <td class="uk-text-center">82.3</td>
+                      <td class="uk-text-center">50.8</td>
+                      <td class="uk-text-center">29.3</td>
+                      <td class="uk-text-center">62.4</td>
+                      <td class="uk-text-center">37.2</td>
+                      <td class="uk-text-center">65.1</td>
+                      <td class="uk-text-center">84.4</td>
+                      <td class="uk-text-center">68.2</td>
+                      <td class="uk-text-center">66.7</td>
+                      <td class="uk-text-center">86.6</td>
+                      <td class="uk-text-center">83.5</td>
+                  </tr>
+                  <tr>
+                      <td class="uk-text-left">SpaceR-7B</td>
+                      <td class="uk-text-center">74.8</td>
+                      <td class="uk-text-center">53.3</td>
+                      <td class="uk-text-center">20.1</td>
+                      <td class="uk-text-center">55.4</td>
+                      <td class="uk-text-center">43.5</td>
+                      <td class="uk-text-center">61.6</td>
+                      <td class="uk-text-center">84.3</td>
+                      <td class="uk-text-center">64.7</td>
+                      <td class="uk-text-center">53.1</td>
+                      <td class="uk-text-center">85.9</td>
+                      <td class="uk-text-center">85.5</td>
+                  </tr>
+                  <tr>
+                      <td class="uk-text-left">SPAR-8B</td>
+                      <td class="uk-text-center">80.7</td>
+                      <td class="uk-text-center">57.5</td>
+                      <td class="uk-text-center">-</td>
+                      <td class="uk-text-center">43.9</td>
+                      <td class="uk-text-center">41.1</td>
+                      <td class="uk-text-center">-</td>
+                      <td class="uk-text-center">79.9</td>
+                      <td class="uk-text-center">64.7</td>
+                      <td class="uk-text-center">-</td>
+                      <td class="uk-text-center">-</td>
+                      <td class="uk-text-center">-</td>
+                  </tr>
+                  <!-- 第三部分：我们的模型 (使用 uk-active 来高亮) -->
+                  <tr>
+                      <td class="uk-text-left" bgcolor="#f2f8ff">VST-3B-SFT (ours)</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">84.4</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">54.1</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">30.2</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">59.1</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">57.9</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">58.0</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">80.9</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">68.4</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">45.2</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">83.7</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">82.5</td>
+                  </tr>
+                  <tr>
+                      <td class="uk-text-left" bgcolor="#f2f8ff">VST-3B-RL (ours)</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">84.2</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">56.5</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">31.3</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">57.2</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">57.7</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">58.9</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">80.5</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">68.5</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">49.8</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">80.9</td>
+                      <td class="uk-text-center" bgcolor="#f2f8ff">82.4</td>
+                  </tr>
+                  <tr>
+                      <td class="uk-text-left" bgcolor="#e2f0ff">VST-7B-SFT (ours)</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">85.5</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">54.6</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">32.0</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">62.1</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">60.6</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">63.1</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">83.3</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">72.2</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">50.6</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">85.5</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">84.9</td>
+                  </tr>
+                  <tr>
+                      <td class="uk-text-left" bgcolor="#e2f0ff">VST-7B-RL (ours)</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff"><span class="uk-text-bold">86.5</span></td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff"><span class="uk-text-bold">60.1</span></td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff"><span class="uk-text-bold">34.8</span></td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff"><span class="uk-text-bold">62.6</span></td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff"><span class="uk-text-bold">61.2</span></td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">63.5</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">83.0</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">68.5</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">49.4</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">86.1</td>
+                      <td class="uk-text-center" bgcolor="#e2f0ff">83.5</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+
+      ### Comparison with state-of-the-art VLMs on VSI-Bench
+
+      *Visuospatial tuning enables robust perception and reasoning over scenes, even without explicit 3D features.*
 
       <div class="uk-overflow-auto uk-width-1-1">
         <table class="uk-table uk-table-small uk-text-small uk-table-divider">
           <thead>
             <tr>
-              <th>Model Name</th>
-              <th>Accuracy (%)</th>
-              <th>Inference Time (ms)</th>
-              <th>Memory Usage (MB)</th>
-              <th>Training Time (hours)</th>
+              <th class="uk-text-left">Methods</th>
+              <th class="uk-text-center">Avg.</th>
+              <th class="uk-text-center">Obj.<br>Count</th>
+              <th class="uk-text-center">Abs.<br>Dist.</th>
+              <th class="uk-text-center">Obj.<br>Size</th>
+              <th class="uk-text-center">Room<br>Size</th>
+              <th class="uk-text-center">Rel.<br>Dist</th>
+              <th class="uk-text-center">Rel.<br>Dir.</th>
+              <th class="uk-text-center">Route<br>Plan</th>
+              <th class="uk-text-center">Appr.<br>Order</th>
             </tr>
           </thead>
           <tbody>
+            <!-- 第一部分：基线模型 -->
             <tr>
-              <td>TransGPT-XT<br/>GigaBERT Prime</td>
-              <td>96.3<br/>94.7</td>
-              <td>8.2<br/>9.5</td>
-              <td>1200<br/>1100</td>
-              <td>36<br/>48</td>
+              <td class="uk-text-left">GPT-4o</td>
+              <td class="uk-text-center">34.0</td>
+              <td class="uk-text-center">46.2</td>
+              <td class="uk-text-center">5.3</td>
+              <td class="uk-text-center">43.8</td>
+              <td class="uk-text-center">38.2</td>
+              <td class="uk-text-center">37.0</td>
+              <td class="uk-text-center">41.3</td>
+              <td class="uk-text-center">31.5</td>
+              <td class="uk-text-center">28.5</td>
             </tr>
             <tr>
-              <td>MegaLSTM-Pro<br/>UltraTransformer</td>
-              <td>92.5<br/>97.1</td>
-              <td>10.1<br/>7.8</td>
-              <td>1050<br/>1300</td>
-              <td>56<br/>42</td>
+              <td class="uk-text-left">Gemini-1.5-Pro</td>
+              <td class="uk-text-center">45.4</td>
+              <td class="uk-text-center">56.2</td>
+              <td class="uk-text-center">30.9</td>
+              <td class="uk-text-center">64.1</td>
+              <td class="uk-text-center">43.6</td>
+              <td class="uk-text-center">51.3</td>
+              <td class="uk-text-center">46.3</td>
+              <td class="uk-text-center">36.0</td>
+              <td class="uk-text-center">34.6</td>
             </tr>
-            <tr class="uk-active">
-              <td>QuantumDNN-ALPHA</td>
-              <td>95.8</td>
-              <td>8.5</td>
-              <td>1250</td>
-              <td>50</td>
+            <!-- 第二部分：相关工作 -->
+            <tr>
+              <td class="uk-text-left">LLaVA-OneVision-7B</td>
+              <td class="uk-text-center">32.4</td>
+              <td class="uk-text-center">47.7</td>
+              <td class="uk-text-center">20.2</td>
+              <td class="uk-text-center">47.4</td>
+              <td class="uk-text-center">12.3</td>
+              <td class="uk-text-center">42.5</td>
+              <td class="uk-text-center">35.2</td>
+              <td class="uk-text-center">29.4</td>
+              <td class="uk-text-center">24.4</td>
+            </tr>
+            <tr>
+              <td class="uk-text-left">LLaVA-Video-7B</td>
+              <td class="uk-text-center">35.6</td>
+              <td class="uk-text-center">48.5</td>
+              <td class="uk-text-center">14.0</td>
+              <td class="uk-text-center">47.8</td>
+              <td class="uk-text-center">24.2</td>
+              <td class="uk-text-center">43.5</td>
+              <td class="uk-text-center">42.4</td>
+              <td class="uk-text-center">34.0</td>
+              <td class="uk-text-center">30.6</td>
+            </tr>
+            <tr>
+              <td class="uk-text-left">Qwen2.5-VL-7B</td>
+              <td class="uk-text-center">32.7</td>
+              <td class="uk-text-center">34.5</td>
+              <td class="uk-text-center">19.4</td>
+              <td class="uk-text-center">47.6</td>
+              <td class="uk-text-center">40.8</td>
+              <td class="uk-text-center">32.8</td>
+              <td class="uk-text-center">24.5</td>
+              <td class="uk-text-center">32.5</td>
+              <td class="uk-text-center">29.4</td>
+            </tr>
+            <tr>
+              <td class="uk-text-left">SAT-7B</td>
+              <td class="uk-text-center">-</td>
+              <td class="uk-text-center">-</td>
+              <td class="uk-text-center">-</td>
+              <td class="uk-text-center">-</td>
+              <td class="uk-text-center">-</td>
+              <td class="uk-text-center">47.3</td>
+              <td class="uk-text-center">41.1</td>
+              <td class="uk-text-center">37.1</td>
+              <td class="uk-text-center">36.1</td>
+            </tr>
+            <tr>
+              <td class="uk-text-left">InternVL-Spatial-8B</td>
+              <td class="uk-text-center">-</td>
+              <td class="uk-text-center">68.7</td>
+              <td class="uk-text-center">40.9</td>
+              <td class="uk-text-center">63.1</td>
+              <td class="uk-text-center">54.3</td>
+              <td class="uk-text-center">47.7</td>
+              <td class="uk-text-center">-</td>
+              <td class="uk-text-center">29.9</td>
+              <td class="uk-text-center">60.5</td>
+            </tr>
+            <tr>
+              <td class="uk-text-left">SpaceR-7B</td>
+              <td class="uk-text-center">43.5</td>
+              <td class="uk-text-center">61.9</td>
+              <td class="uk-text-center">28.6</td>
+              <td class="uk-text-center">60.9</td>
+              <td class="uk-text-center">35.2</td>
+              <td class="uk-text-center">38.2</td>
+              <td class="uk-text-center">46.0</td>
+              <td class="uk-text-center">31.4</td>
+              <td class="uk-text-center">45.6</td>
+            </tr>
+            <tr>
+              <td class="uk-text-left">VILASR-7B</td>
+              <td class="uk-text-center">45.4</td>
+              <td class="uk-text-center">63.5</td>
+              <td class="uk-text-center">34.4</td>
+              <td class="uk-text-center">60.6</td>
+              <td class="uk-text-center">30.9</td>
+              <td class="uk-text-center">48.9</td>
+              <td class="uk-text-center">45.2</td>
+              <td class="uk-text-center">30.4</td>
+              <td class="uk-text-center">49.2</td>
+            </tr>
+            <tr>
+              <td class="uk-text-left">VLM-3R-7B</td>
+              <td class="uk-text-center"><b>60.9</b></td>
+              <td class="uk-text-center">70.2</td>
+              <td class="uk-text-center"><b>49.4</b></td>
+              <td class="uk-text-center">69.2</td>
+              <td class="uk-text-center">67.1</td>
+              <td class="uk-text-center"><b>65.4</b></td>
+              <td class="uk-text-center"><b>80.5</b></td>
+              <td class="uk-text-center"><b>45.4</b></td>
+              <td class="uk-text-center">40.1</td>
+            </tr>
+            <!-- 第三部分：我们的模型 (带背景色) -->
+            <tr>
+              <td class="uk-text-left" bgcolor="#f2f8ff">VST-3B-SFT (ours)</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">57.9</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">69.3</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">45.4</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">71.8</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">62.4</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">59.0</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">46.0</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">38.7</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff"><b>70.2</b></td>
+            </tr>
+            <tr>
+              <td class="uk-text-left" bgcolor="#f2f8ff">VST-3B-RL (ours)</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">57.7</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">66.6</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">45.0</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">72.8</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">60.9</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">59.9</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">47.6</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">40.7</td>
+              <td class="uk-text-center" bgcolor="#f2f8ff">68.3</td>
+            </tr>
+            <tr>
+              <td class="uk-text-left" bgcolor="#e2f0ff">VST-7B-SFT (ours)</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">60.6</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff"><b>72.0</b></td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">44.4</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">74.3</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">68.3</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">59.7</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">55.8</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">44.9</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">65.2</td>
+            </tr>
+            <tr>
+              <td class="uk-text-left" bgcolor="#e2f0ff">VST-7B-RL (ours)</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff"><b>61.2</b></td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">71.6</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">43.8</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff"><b>75.5</b></td>
+              <td class="uk-text-center" bgcolor="#e2f0ff"><b>69.2</b></td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">60.0</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">55.6</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">44.3</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">69.2</td>
             </tr>
           </tbody>
         </table>
       </div>
-  - title: Codeblock examples
-    text: |
-      Code blocks are automatically highlighted by [highlight.js](https://highlightjs.org/examples). To change the theme, import a preferred `.css`.
 
-      ```javascript
-      // src/components/body.jsx
-      import { markedHighlight } from "marked-highlight";
-      import hljs from 'highlight.js';
-      //import 'highlight.js/styles/base16/gruvbox-dark-hard.css';
-      import 'highlight.js/styles/base16/github.css';
 
-      const renderer = new marked.Renderer();
-      renderer.code = (code, language) => {
-        return `<pre class="hljs"><code class="hljs language-${language}">${code}</code></pre>`
-      }
-      ```
-  - title: KaTeX examples
-    text: >
-      $\KaTeX$ enables you to write mathematical expressions beautifully within your text (e.g. $\alpha$, $\beta$, $\gamma$ ).
-      $$ax^2 + bx + c = 0$$
-      $$ \int \oint \sum \prod $$
-      $$ \begin{CD} A @>a>> B \\ @VbVV @AAcA \\ C @= D \end{CD} $$
-      [KaTeX supports a wide range of mathematical symbols and equations](https://katex.org/docs/support_table.html), ensuring your technical content is both clear and visually appealing.
-      With markdown for text formatting and KaTeX for mathematical expressions, our template empowers you to communicate complex ideas effectively. Whether you're writing a scientific paper or a technical blog post, harnessing these tools will elevate your content and engage your readers.
+      ### Comparison AP@15 on SUN RGB-D 3D object detection benchmark
 
-  - title: Color Palette
-    text: |
-      To customize the theme, edit UIkit variables in [theme.scss](https://github.com/denkiwakame/academic-project-template/blob/project-page/src/scss/theme.scss). Material Design colors are available as variables (e.g. `$clr-blue-50` ). For the full set of colors, please visit [Material Design Color System](https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors).
+      *VST shows strong 3D object detection abilities.*
 
-      <div class="uk-overflow-auto">
-      <table class="uk-table uk-table-small uk-text-small uk-table-divider">
-        <thead>
-          <tr>
-            <th>50</th>
-            <th>100</th>
-            <th>200</th>
-            <th>300</th>
-            <th>400</th>
-            <th>500</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td bgcolor="#FFEBEE">$clr-red-50</td>
-            <td bgcolor="#FFCCD2">$clr-red-100</td>
-            <td bgcolor="#EF9A9A">$clr-red-200</td>
-            <td bgcolor="#E57373">$clr-red-300</td>
-            <td bgcolor="#FF5350">$clr-red-400</td>
-            <td bgcolor="#F44336">$clr-red-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#FCE4EC">$clr-pink-50</td>
-            <td bgcolor="#F8BBD0">$clr-pink-100</td>
-            <td bgcolor="#F48FB1">$clr-pink-200</td>
-            <td bgcolor="#F06292">$clr-pink-300</td>
-            <td bgcolor="#EC407A">$clr-pink-400</td>
-            <td bgcolor="#E91E63">$clr-pink-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#E8EAF6">$clr-indigo-50</td>
-            <td bgcolor="#C5CAE9">$clr-indigo-100</td>
-            <td bgcolor="#9FA8DA">$clr-indigo-200</td>
-            <td bgcolor="#7986CB">$clr-indigo-300</td>
-            <td bgcolor="#5C6BC0">$clr-indigo-400</td>
-            <td bgcolor="#3F51B5">$clr-indigo-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#E0F7FA">$clr-cyan-50</td>
-            <td bgcolor="#B2EBF2">$clr-cyan-100</td>
-            <td bgcolor="#80DEEA">$clr-cyan-200</td>
-            <td bgcolor="#4DD0E1">$clr-cyan-300</td>
-            <td bgcolor="#26C6DA">$clr-cyan-400</td>
-            <td bgcolor="#00BCD4">$clr-cyan-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#E0F2F1">$clr-teal-50</td>
-            <td bgcolor="#B2DFDB">$clr-teal-100</td>
-            <td bgcolor="#80CBC4">$clr-teal-200</td>
-            <td bgcolor="#4DB6AC">$clr-teal-300</td>
-            <td bgcolor="#26A69A">$clr-teal-400</td>
-            <td bgcolor="#009688">$clr-teal-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#FFF8E1">$clr-amber-50</td>
-            <td bgcolor="#FFECB3">$clr-amber-100</td>
-            <td bgcolor="#FFE082">$clr-amber-200</td>
-            <td bgcolor="#FFD54F">$clr-amber-300</td>
-            <td bgcolor="#FFCA28">$clr-amber-400</td>
-            <td bgcolor="#FFC107">$clr-amber-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#F9FBE7">$clr-lime-50</td>
-            <td bgcolor="#F0F4C3">$clr-lime-100</td>
-            <td bgcolor="#E6EE9C">$clr-lime-200</td>
-            <td bgcolor="#DCE775">$clr-lime-300</td>
-            <td bgcolor="#D4E157">$clr-lime-400</td>
-            <td bgcolor="#CDDC39">$clr-lime-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#FAFAFA">$clr-grey-50</td>
-            <td bgcolor="#F5F5F5">$clr-grey-100</td>
-            <td bgcolor="#EEEEEE">$clr-grey-200</td>
-            <td bgcolor="#E0E0E0">$clr-grey-300</td>
-            <td bgcolor="#BDBDBD">$clr-grey-400</td>
-            <td bgcolor="#9E9E9E">$clr-grey-500</td>
-          </tr>
-        </tbody>
-      </table>
+      <div style="text-align: center;">
+        <img src="assets/results_3dod.jpg" style="width: 600px;">
       </div>
-  - title: License
-    text: |
-      This template is provided under the [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) license.
-      You are free to use and modify the code in your project as long as you include a link to this [GitHub repository](https://github.com/denkiwakame/academic-project-template) in your footer.
 
-projects: # relevant projects
-  - title: Relevant Project I
-    description: abstract text
-    img: https://getuikit.com/docs/images/light.jpg
-    journal: "ABCD'23"
-    url: https://denkiwakame.github.io/academic-project-template/
-  - title: Relevant Project II
-    description: abstract text
-    img: 001.jpg
-    journal: "EFGH'22"
-    url: https://denkiwakame.github.io/academic-project-template/
-  - title: Relevant Project III
-    description: abstract text
-    img: 002.jpg
-    journal: "IJKL'22"
-    url: https://denkiwakame.github.io/academic-project-template/
+
+      ### Expanding to VLA Model (Success rate comparison on the LIBERO benchmark)
+
+      *The integration of spatial knowledge provides a significant performance benefit to VLA models.*
+
+      <div class="uk-overflow-auto uk-width-1-1">
+        <!-- 表格主体 -->
+        <table class="uk-table uk-table-small uk-text-small uk-table-divider">
+          <!-- 表头 -->
+          <thead>
+            <tr>
+              <th class="uk-text-left">VLA Backbone</th>
+              <th class="uk-text-center">LIBERO-spatial</th>
+              <th class="uk-text-center">LIBERO-object</th>
+              <th class="uk-text-center">LIBERO-goal</th>
+              <th class="uk-text-center">LIBERO-10</th>
+              <th class="uk-text-center">AVG</th>
+            </tr>
+          </thead>
+          <!-- 表格内容 -->
+          <tbody>
+            <tr>
+              <td class="uk-text-left">Qwen2.5-VL-3B</td>
+              <td class="uk-text-center">56.6</td>
+              <td class="uk-text-center">86.6</td>
+              <td class="uk-text-center">53.8</td>
+              <td class="uk-text-center">15.2</td>
+              <td class="uk-text-center">53.1</td>
+            </tr>
+            <tr>
+              <td class="uk-text-left" bgcolor="#e2f0ff">Qwen2.5-VL-3B (<b>VST, ours</b>)</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">65.0 (<b>+8.4</b>)</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">88.4 (<b>+1.8</b>)</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">67.8 (<b>+4.0</b>)</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">25.6 (<b>+10.4</b>)</td>
+              <td class="uk-text-center" bgcolor="#e2f0ff">61.7 (<b>+8.6</b>)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      Task: "pick up the black bowl between the plate and the ramekin and place it on the plate"
+      <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-2@m" uk-grid>
+        <!-- 第一個影片 -->
+        <div class="uk-text-center">
+          <figure class="uk-margin-remove"> <!-- uk-margin-remove 是為了移除 figure 預設的邊距 -->
+            <figcaption class="uk-text-center uk-text-small uk-margin-small-top">
+              Qwen2.5-VL-3B (❌)
+            </figcaption>
+            <video
+              src=assets/vla_demo/qwen/libero_spatial/2025_09_13-18_23_24--episode=1--success=False--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+              loop
+              muted
+              uk-video="autoplay:inview"
+            ></video>
+          </figure>
+        </div>
+        <!-- 第二個影片 -->
+        <div class="uk-text-center">
+          <figure class="uk-margin-remove">
+            <figcaption class="uk-text-center uk-text-small uk-margin-small-top">
+              VST-tuned Qwen2.5-VL-3B (✅)
+            </figcaption>
+            <video
+              src=assets/vla_demo/vst/libero_spatial/2025_09_15-15_16_03--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+              loop
+              muted
+              uk-video="autoplay:inview"
+            ></video>
+          </figure>
+        </div>
+      </div>
+
+      Task: "pick up the alphabet soup and place it in the basket"
+      <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-2@m" uk-grid>
+        <!-- 第一個影片 -->
+        <div class="uk-text-center">
+          <figure class="uk-margin-remove"> <!-- uk-margin-remove 是為了移除 figure 預設的邊距 -->
+            <figcaption class="uk-text-center uk-text-small uk-margin-small-top">
+              Qwen2.5-VL-3B (❌)
+            </figcaption>
+            <video
+              src=assets/vla_demo/qwen/libero_object/2025_09_14-00_26_08--episode=4--success=False--task=pick_up_the_alphabet_soup_and_place_it_in_the_bask.mp4
+              loop
+              muted
+              uk-video="autoplay:inview"
+            ></video>
+          </figure>
+        </div>
+        <!-- 第二個影片 -->
+        <div class="uk-text-center">
+          <figure class="uk-margin-remove">
+            <figcaption class="uk-text-center uk-text-small uk-margin-small-top">
+              VST-tuned Qwen2.5-VL-3B (✅)
+            </figcaption>
+            <video
+              src=assets/vla_demo/vst/libero_object/2025_09_15-15_47_22--episode=1--success=True--task=pick_up_the_alphabet_soup_and_place_it_in_the_bask.mp4
+              loop
+              muted
+              uk-video="autoplay:inview"
+            ></video>
+          </figure>
+        </div>
+      </div>
+
+
+      Task: "open the middle drawer of the cabinet"
+      <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-2@m" uk-grid>
+        <!-- 第一個影片 -->
+        <div class="uk-text-center">
+          <figure class="uk-margin-remove"> <!-- uk-margin-remove 是為了移除 figure 預設的邊距 -->
+            <figcaption class="uk-text-center uk-text-small uk-margin-small-top">
+              Qwen2.5-VL-3B (❌)
+            </figcaption>
+            <video
+              src=assets/vla_demo/qwen/libero_goal/2025_09_13-21_54_05--episode=1--success=False--task=open_the_middle_drawer_of_the_cabinet.mp4
+              loop
+              muted
+              uk-video="autoplay:inview"
+            ></video>
+          </figure>
+        </div>
+        <!-- 第二個影片 -->
+        <div class="uk-text-center">
+          <figure class="uk-margin-remove">
+            <figcaption class="uk-text-center uk-text-small uk-margin-small-top">
+              VST-tuned Qwen2.5-VL-3B (✅)
+            </figcaption>
+            <video
+              src=assets/vla_demo/vst/libero_goal/2025_09_15-15_51_51--episode=1--success=True--task=open_the_middle_drawer_of_the_cabinet.mp4
+              loop
+              muted
+              uk-video="autoplay:inview"
+            ></video>
+          </figure>
+        </div>
+      </div>
+
+
+      Task: "put both the cream cheese box and the butter in the basket"
+      <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-2@m" uk-grid>
+        <!-- 第一個影片 -->
+        <div class="uk-text-center">
+          <figure class="uk-margin-remove"> <!-- uk-margin-remove 是為了移除 figure 預設的邊距 -->
+            <figcaption class="uk-text-center uk-text-small uk-margin-small-top">
+              Qwen2.5-VL-3B (❌)
+            </figcaption>
+            <video
+              src=assets/vla_demo/qwen/libero_10/2025_09_13-22_03_08--episode=10--success=False--task=put_both_the_cream_cheese_box_and_the_butter_in_th.mp4
+              loop
+              muted
+              uk-video="autoplay:inview"
+            ></video>
+          </figure>
+        </div>
+        <!-- 第二個影片 -->
+        <div class="uk-text-center">
+          <figure class="uk-margin-remove">
+            <figcaption class="uk-text-center uk-text-small uk-margin-small-top">
+              VST-tuned Qwen2.5-VL-3B (✅)
+            </figcaption>
+            <video
+              src=assets/vla_demo/vst/libero_10/2025_09_13-22_03_08--episode=7--success=True--task=put_both_the_cream_cheese_box_and_the_butter_in_th.mp4
+              loop
+              muted
+              uk-video="autoplay:inview"
+            ></video>
+          </figure>
+        </div>
+      </div>
+
+  - title: Special Design
+    text: |
+        #### 1. FoV unification
+        We normalize the input data by projecting all images onto a virtual camera with a predefined, uniform FoV. 
+        
+        #### 2. Scene caption
+        Scene caption describes the layout information and spatial relationships within the image. 
+
+        #### 3. Prompting with BEV annotation
+        We provide RGB images, the corresponding BEV visualizations, detailed object information, and question-answer pairs to prompt the teacher VLM. 
+
+        Case:
+
+        <div uk-slideshow="animation: push; min-height: 700; max-height: 700">
+          <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+            <div class="uk-slideshow-items">
+              <div>
+                <img src="assets/prompting_wo_bev.jpg" alt="" uk-img style="width:100%;height:auto;">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-left"
+                      style="background:white;color:#222;font-size:10px;opacity:0.9;padding:3px 0;">
+                    <b>w/o BEV annotation</b>
+                    <br>
+                    <b>Question:</b> If the small cup on the right side of the white L-shaped desk near a water bottle is in front of the black printer on the left side of the white L-shaped desk next to a stack of colorful drawers, which direction is the metal trash can on the floor between the tall white storage cabinets and the white desk from the printer? Options: A. front-left B. front-right C. left D. back-left. 
+                    <br><b>CoT:</b> First, I look at the first image. The left wall is lined with tall white storage cabinets with metal handles, stretching almost the entire length of the wall. To the right, there's a white desk holding a stack of colorful drawers-these drawers are a key reference because they appear in both images. Between the cabinets and the desk, a small metal trash can sits on the brown carpet, positioned close to the base of the cabinets. In the background, a coat hanger with hanging items leans against the wall, and a few boxes are scattered on the floor near the cabinets. An office chair is partially visible next to the desk, facing the cabinets.  
+                    Next, I examine the second image. It's taken from a closer, more forward angle, with the camera tilted up slightly and turned to the right-this shift makes the desk the focal point of the foreground. The desk is now clearly L-shaped: one section extends towards the left (where the colorful drawers are) and another curves towards the right (where two black monitors sit). On the right side of the desk, near the monitors, there's a water bottle and a small cup-this is the cup mentioned in the question. On the left side of the desk, next to the colorful drawers, a black printer rests on the surface-this is the printer referenced. A door is visible in the background, and the coat hanger from the first image is still in place, now near the door. The office chair is fully visible in the foreground, facing the desk, and new items like a lamp, a telephone, and papers are scattered on the desk.  
+                    To piece together the entire scene layout, I connect the elements from both images. The tall white storage cabinets run along the left wall of the room, providing a fixed reference point. The white desk is positioned against the right wall, extending into an L-shape: one arm of the L faces the cabinets (as seen in the first image, where the desk is against the right wall and the cabinets are on the left), and the other arm faces the center of the room (as seen in the second image, where the desk curves towards the monitors). The metal trash can is permanently located between the cabinets and the left end of the desk-this is consistent across both images, as it's clearly visible in the first image and implied in the second (since the cabinets and desk's left end are still present).  
+                    Now, I focus on the relative positions of the printer, cup, and trash can. The question states the cup is in front of the printer, so I need to establish the printer's orientation. In the second image, <span style="color: blue;">the printer is on the left end of the desk, next to the colorful drawers.</span> <span style="color: red;">[error direction]</span> The cup is on the right end of the desk, near the monitors. For the cup to be "in front" of the printer, the printer must be facing towards the cup-this means the printer's front direction is along the length of the desk, from the left end (where the printer is) to the right end (where the cup is). This makes sense because the desk is a continuous surface, and the printer is positioned to face the main working area of the desk (where the monitors and cup are).  
+                    Next, I need to determine where the trash can is relative to the printer. The trash can is between the tall white storage cabinets (on the left wall) and the left end of the desk (where the printer is). From the printer's perspective-sitting on the left end of the desk, facing towards the cup (front direction)-the trash can is in front of the printer (towards the cabinets, which are in the direction opposite to the camera in the first image) but slightly to the right. Why? Because the printer is at the very left end of the desk, and the trash can is positioned between that end and the cabinets. So from the printer's view, the trash can isn't directly to the left (which would be towards the cabinets) but rather in front, with a slight right shift relative to the printer's front axis (which is towards the cup). This right shift is because the trash can is not aligned perfectly with the printer's left side but rather between the printer's position and the cabinets, making it fall into the front-right quadrant from the printer's perspective.  
+                    To confirm this, I visualize standing at the printer's position on the desk. If I face the cup (front), my left side would be towards the cabinets, and my right side would be towards the rest of the desk. The trash can is between me (the printer) and the cabinets, but not directly to my left-instead, it's in front of me, but a little to the right. This places the trash can in the front-right direction from the printer.  
+                    Summarizing my reasoning, the trash can is located in the front-right direction relative to the printer, which matches option B.
+                </div>
+              </div>
+              <div>
+                <img src="assets/prompting_w_bev.jpg" alt="" uk-img style="width:100%;height:auto;">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-left"
+                      style="background:white;color:#222;font-size:10px;opacity:0.9;padding:3px 0;">
+                    <b>w/ BEV annotation</b>
+                    <br>
+                    <b>Question:</b> If the small metal trash can on the floor near the white storage cabinets in the first image is north of the small printer on the white cabinet near the door in the second image, what direction is the clear plastic bottle on the white desk with two monitors in the second image from the printer? Options: A. southeast, B. northeast, C. south, D. northwest
+                    <br><b>CoT:</b> First, I look at the first image. The scene has a long row of white storage cabinets along the left wall, a white desk with shelves holding folders on the right, and a small metal trash can sitting on the floor between the cabinets and the desk. There's also a coat hanger in the corner and some boxes stacked nearby. The trash can is clearly positioned on the left side of the room, close to the storage cabinets.  
+                    Next, I examine the second image, which was taken from a closer, more forward angle-like the camera moved toward the desk and tilted up slightly. The desk is now in the foreground, holding two black monitors, a keyboard, a mouse, a telephone, and a clear plastic bottle. Against the back wall near the door, there's a small printer on a white cabinet. The door and coat hanger from the first image are still visible in the background, but the trash can isn't present here.  
+                    Putting both images together, the room's layout makes sense: the left wall has storage cabinets, the center/right has a desk, and the back wall has a door. The trash can (from image 1) is on the left side near the cabinets, the printer (from image 2) is on the back right near the door, and the bottle (from image 2) is on the foreground desk.  
+                    The question says the trash can is north of the printer. Since the trash can is on the left side of the room and the printer is on the back right, "north" from the printer's perspective must be toward the left-toward the trash can. Now, I need to figure out where the bottle is relative to the printer. The bottle is on the desk, which is in the foreground of the second image. From the printer's position (back right near the door), the desk is in front of it-closer to the camera. The bottle is on the part of the desk that's to the left of the printer (since the desk extends from the foreground to the back wall, and the printer is on a cabinet against the back wall to the right of the desk).  
+                    So, from the printer's view: the bottle is to the left (the same direction as north, since north is toward the trash can on the left) and forward (since the desk is closer than the trash can). Combining these, the bottle is in the northwest direction from the printer. That matches option D.
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+              </div>
+            </div>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
+          </div>
+          <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+        </div>
+
+
+  # - title: Media examples
+  #   text: |
+  #     ### Mediafile Path
+  #     Files in `public/` can be referenced directly: `<img src="001.jpg" />`
+
+  #     ### UIKit Components
+  #     This template supports all UIKit components.
+  #     To check available components, refer to the [UIKit documentation](https://getuikit.com/docs).
+  #     [Slideshow](https://getuikit.com/docs/slideshow) example
+
+  #     </div>
+  #     <div uk-slideshow="animation: push">
+  #       <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+  #         <div class="uk-slideshow-items">
+  #           <div>
+  #             <img src="001.jpg" alt="" uk-cover>
+  #           </div>
+  #           <div>
+  #             <img src="002.jpg" alt="" uk-cover>
+  #           </div>
+  #           <div>
+  #             <img src="003.jpg" alt="" uk-cover>
+  #           </div>
+  #         </div>
+  #         <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+  #         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
+  #       </div>
+  #       <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+  #     </div>
+
+  #     [Grid system](https://getuikit.com/docs/grid) example
+  #     <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-3@m" uk-grid>
+  #       <div>
+  #         <img src="001.jpg">
+  #         <span class="uk-text-meta">Fig1 - caption example</figcaption>
+  #       </div>
+  #       <div>
+  #         <img src="002.jpg" />
+  #         <span class="uk-text-meta">Fig2 - caption example</figcaption>
+  #       </div>
+  #       <div>
+  #         <img src="003.jpg">
+  #         <span class="uk-text-meta">Fig3 - caption example</figcaption>
+  #       </div>
+  #     </div>
+
+  #     [Video](https://getuikit.com/docs/video) and [Slider](https://getuikit.com/docs/slider) component example
+  #     <div uk-slider>
+  #       <div class="uk-slider-items uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m uk-grid">
+  #         <div>
+  #           <video
+  #             src="https://yootheme.com/site/images/media/yootheme-pro.mp4"
+  #             loop
+  #             muted
+  #             uk-video="autoplay:inview"
+  #             />
+  #         </div>
+  #         <div>
+  #           <video
+  #             src="https://yootheme.com/site/images/media/yootheme-pro.mp4"
+  #             loop
+  #             muted
+  #             uk-video="autoplay:inview"
+  #             />
+  #         </div>
+  #         <div>
+  #           <video
+  #             src="https://yootheme.com/site/images/media/yootheme-pro.mp4"
+  #             loop
+  #             muted
+  #             uk-video="autoplay:inview"
+  #             />
+  #         </div>
+  #       </div>
+  #       <div class="uk-flex uk-flex-center uk-margin-small">
+  #         <a class="uk-icon-button" href uk-slidenav-previous uk-slider-item="previous"></a>
+  #         <a class="uk-icon-button uk-margin-small-left" href uk-slidenav-next uk-slider-item="next"></a>
+  #       </div>
+  #     </div>
+
+  #     [Image-Comparison-Slider](https://img-comparison-slider.sneas.io) example
+  #     <img-comparison-slider>
+  #       <img slot="first" src="002.jpg" />
+  #       <img slot="second" src="004.jpg" />
+  #     </img-comparison-slider>
+
+  # - title: Markdown examples
+  #   text: |
+  #     Here's our demo text showcasing the power of markdown and KaTeX integration!
+  #     Markdown allows you to easily format text using simple syntax.
+  #     - **bold**
+  #     - *italic*
+  #     - `inline code`.
+
+  #     You can also create headings of various levels:
+  #     # Heading Level 1
+  #     ## Heading Level 2
+  #     ### Heading Level 3
+  #     #### Heading Level 4
+  #     Markdown allows you to create tables like the following:
+  #     ### Fictitious AI Benchmark Results
+  #     | **Model Name** | **Accuracy (%)** ⬆️| **Inference Time (ms)** ⬇️|
+  #     |---------------------|--------------|---------------------|
+  #     | TransGPT-XT         | 96.3         | $\infty$                 |
+  #     | GigaBERT Prime      | 94.7         | 9.5                 |
+  #     | MegaLSTM-Pro        | 92.5         | 10.1                |
+  #     | UltraTransformer    | 97.1         | 7.8                 |
+  #     | **QuantumDNN-ALPHA**    | 95.8         | 8.5             |
+
+  #     Of course, you can also directly write tables in HTML if needed. For more details, refer to the [UIKit Table documentation](https://getuikit.com/docs/table).
+
+  #     <div class="uk-overflow-auto uk-width-1-1">
+  #       <table class="uk-table uk-table-small uk-text-small uk-table-divider">
+  #         <thead>
+  #           <tr>
+  #             <th>Model Name</th>
+  #             <th>Accuracy (%)</th>
+  #             <th>Inference Time (ms)</th>
+  #             <th>Memory Usage (MB)</th>
+  #             <th>Training Time (hours)</th>
+  #           </tr>
+  #         </thead>
+  #         <tbody>
+  #           <tr>
+  #             <td>TransGPT-XT<br/>GigaBERT Prime</td>
+  #             <td>96.3<br/>94.7</td>
+  #             <td>8.2<br/>9.5</td>
+  #             <td>1200<br/>1100</td>
+  #             <td>36<br/>48</td>
+  #           </tr>
+  #           <tr>
+  #             <td>MegaLSTM-Pro<br/>UltraTransformer</td>
+  #             <td>92.5<br/>97.1</td>
+  #             <td>10.1<br/>7.8</td>
+  #             <td>1050<br/>1300</td>
+  #             <td>56<br/>42</td>
+  #           </tr>
+  #           <tr class="uk-active">
+  #             <td>QuantumDNN-ALPHA</td>
+  #             <td>95.8</td>
+  #             <td>8.5</td>
+  #             <td>1250</td>
+  #             <td>50</td>
+  #           </tr>
+  #         </tbody>
+  #       </table>
+  #     </div>
+  # - title: Codeblock examples
+  #   text: |
+  #     Code blocks are automatically highlighted by [highlight.js](https://highlightjs.org/examples). To change the theme, import a preferred `.css`.
+
+  #     ```javascript
+  #     // src/components/body.jsx
+  #     import { markedHighlight } from "marked-highlight";
+  #     import hljs from 'highlight.js';
+  #     //import 'highlight.js/styles/base16/gruvbox-dark-hard.css';
+  #     import 'highlight.js/styles/base16/github.css';
+
+  #     const renderer = new marked.Renderer();
+  #     renderer.code = (code, language) => {
+  #       return `<pre class="hljs"><code class="hljs language-${language}">${code}</code></pre>`
+  #     }
+  #     ```
+  # - title: KaTeX examples
+  #   text: >
+  #     $\KaTeX$ enables you to write mathematical expressions beautifully within your text (e.g. $\alpha$, $\beta$, $\gamma$ ).
+  #     $$ax^2 + bx + c = 0$$
+  #     $$ \int \oint \sum \prod $$
+  #     $$ \begin{CD} A @>a>> B \\ @VbVV @AAcA \\ C @= D \end{CD} $$
+  #     [KaTeX supports a wide range of mathematical symbols and equations](https://katex.org/docs/support_table.html), ensuring your technical content is both clear and visually appealing.
+  #     With markdown for text formatting and KaTeX for mathematical expressions, our template empowers you to communicate complex ideas effectively. Whether you're writing a scientific paper or a technical blog post, harnessing these tools will elevate your content and engage your readers.
+
+  # - title: Color Palette
+  #   text: |
+  #     To customize the theme, edit UIkit variables in [theme.scss](https://github.com/denkiwakame/academic-project-template/blob/project-page/src/scss/theme.scss). Material Design colors are available as variables (e.g. `$clr-blue-50` ). For the full set of colors, please visit [Material Design Color System](https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors).
+
+  #     <div class="uk-overflow-auto">
+  #     <table class="uk-table uk-table-small uk-text-small uk-table-divider">
+  #       <thead>
+  #         <tr>
+  #           <th>50</th>
+  #           <th>100</th>
+  #           <th>200</th>
+  #           <th>300</th>
+  #           <th>400</th>
+  #           <th>500</th>
+  #         </tr>
+  #       </thead>
+  #       <tbody>
+  #         <tr>
+  #           <td bgcolor="#FFEBEE">$clr-red-50</td>
+  #           <td bgcolor="#FFCCD2">$clr-red-100</td>
+  #           <td bgcolor="#EF9A9A">$clr-red-200</td>
+  #           <td bgcolor="#E57373">$clr-red-300</td>
+  #           <td bgcolor="#FF5350">$clr-red-400</td>
+  #           <td bgcolor="#F44336">$clr-red-500</td>
+  #         </tr>
+  #         <tr>
+  #           <td bgcolor="#FCE4EC">$clr-pink-50</td>
+  #           <td bgcolor="#F8BBD0">$clr-pink-100</td>
+  #           <td bgcolor="#F48FB1">$clr-pink-200</td>
+  #           <td bgcolor="#F06292">$clr-pink-300</td>
+  #           <td bgcolor="#EC407A">$clr-pink-400</td>
+  #           <td bgcolor="#E91E63">$clr-pink-500</td>
+  #         </tr>
+  #         <tr>
+  #           <td bgcolor="#E8EAF6">$clr-indigo-50</td>
+  #           <td bgcolor="#C5CAE9">$clr-indigo-100</td>
+  #           <td bgcolor="#9FA8DA">$clr-indigo-200</td>
+  #           <td bgcolor="#7986CB">$clr-indigo-300</td>
+  #           <td bgcolor="#5C6BC0">$clr-indigo-400</td>
+  #           <td bgcolor="#3F51B5">$clr-indigo-500</td>
+  #         </tr>
+  #         <tr>
+  #           <td bgcolor="#E0F7FA">$clr-cyan-50</td>
+  #           <td bgcolor="#B2EBF2">$clr-cyan-100</td>
+  #           <td bgcolor="#80DEEA">$clr-cyan-200</td>
+  #           <td bgcolor="#4DD0E1">$clr-cyan-300</td>
+  #           <td bgcolor="#26C6DA">$clr-cyan-400</td>
+  #           <td bgcolor="#00BCD4">$clr-cyan-500</td>
+  #         </tr>
+  #         <tr>
+  #           <td bgcolor="#E0F2F1">$clr-teal-50</td>
+  #           <td bgcolor="#B2DFDB">$clr-teal-100</td>
+  #           <td bgcolor="#80CBC4">$clr-teal-200</td>
+  #           <td bgcolor="#4DB6AC">$clr-teal-300</td>
+  #           <td bgcolor="#26A69A">$clr-teal-400</td>
+  #           <td bgcolor="#009688">$clr-teal-500</td>
+  #         </tr>
+  #         <tr>
+  #           <td bgcolor="#FFF8E1">$clr-amber-50</td>
+  #           <td bgcolor="#FFECB3">$clr-amber-100</td>
+  #           <td bgcolor="#FFE082">$clr-amber-200</td>
+  #           <td bgcolor="#FFD54F">$clr-amber-300</td>
+  #           <td bgcolor="#FFCA28">$clr-amber-400</td>
+  #           <td bgcolor="#FFC107">$clr-amber-500</td>
+  #         </tr>
+  #         <tr>
+  #           <td bgcolor="#F9FBE7">$clr-lime-50</td>
+  #           <td bgcolor="#F0F4C3">$clr-lime-100</td>
+  #           <td bgcolor="#E6EE9C">$clr-lime-200</td>
+  #           <td bgcolor="#DCE775">$clr-lime-300</td>
+  #           <td bgcolor="#D4E157">$clr-lime-400</td>
+  #           <td bgcolor="#CDDC39">$clr-lime-500</td>
+  #         </tr>
+  #         <tr>
+  #           <td bgcolor="#FAFAFA">$clr-grey-50</td>
+  #           <td bgcolor="#F5F5F5">$clr-grey-100</td>
+  #           <td bgcolor="#EEEEEE">$clr-grey-200</td>
+  #           <td bgcolor="#E0E0E0">$clr-grey-300</td>
+  #           <td bgcolor="#BDBDBD">$clr-grey-400</td>
+  #           <td bgcolor="#9E9E9E">$clr-grey-500</td>
+  #         </tr>
+  #       </tbody>
+  #     </table>
+  #     </div>
+  # - title: License
+  #   text: |
+  #     This template is provided under the [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) license.
+  #     You are free to use and modify the code in your project as long as you include a link to this [GitHub repository](https://github.com/denkiwakame/academic-project-template) in your footer.
+
+# projects: # relevant projects
+#   - title: Relevant Project I
+#     description: abstract text
+#     img: https://getuikit.com/docs/images/light.jpg
+#     journal: "ABCD'23"
+#     url: https://denkiwakame.github.io/academic-project-template/
+  # - title: Relevant Project II
+  #   description: abstract text
+  #   img: 001.jpg
+  #   journal: "EFGH'22"
+  #   url: https://denkiwakame.github.io/academic-project-template/
+  # - title: Relevant Project III
+  #   description: abstract text
+  #   img: 002.jpg
+  #   journal: "IJKL'22"
+  #   url: https://denkiwakame.github.io/academic-project-template/

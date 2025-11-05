@@ -7,7 +7,7 @@ resources:
   paper: # https://openreview.net/
   arxiv: https://arxiv.org
   code: https://github.com/denkiwakame/academic-project-template
-  video: https://www.youtube.com/embed/onbnb_D1wC8?si=xJczUv716Lt5aO4l&amp;start=1150
+  # video: https://www.youtube.com/embed/onbnb_D1wC8?si=xJczUv716Lt5aO4l&amp;start=1150
   # demo: https://colab.research.google.com/
   huggingface: https://huggingface.co/
 description: Project page for VST
@@ -60,10 +60,6 @@ authors:
     affiliation: [2, §]
     position: Researcher
     url: xxx
-  - name: Guang Shi
-    affiliation: [2]
-    position: Researcher
-    url: xxx
   - name: Hengshuang Zhao
     affiliation: [1, §]
     position: Researcher
@@ -90,7 +86,7 @@ abstract: |
   **(1)** We first attempt to enhance spatial perception in VLMs by constructing a large-scale dataset termed **VST-P**, which comprises 4.1 million samples spanning 19 skills across single views, multiple images, and videos.  
   **(2)** Then, we present **VST-R**, a curated dataset with 135K samples that instruct models to reason in space.  
   **(3)** In particular, we adopt **a progressive training pipeline**: supervised fine-tuning to build foundational spatial knowledge, followed by reinforcement learning to further improve spatial reasoning abilities.  
-  Without the side-effect to general capabilities, the proposed VST consistently achieves state-of-the-art results on several spatial benchmarks, including $36.9\%$ on MMSI-Bench and $60.6\%$ on VSI-Bench. 
+  Without the side-effect to general capabilities, the proposed VST consistently achieves state-of-the-art results on several spatial benchmarks, including $34.8\%$ on MMSI-Bench and $61.2\%$ on VSIBench. 
   It turns out that the Vision-Language-Action models can be significantly enhanced with the proposed spatial tuning paradigm, paving the way for more physically grounded AI. 
 
 body:

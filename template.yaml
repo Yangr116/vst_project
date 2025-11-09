@@ -6,7 +6,7 @@ title: Visual Spatial Tuning
 resources:
   paper: # https://openreview.net/
   arxiv: https://arxiv.org
-  code: https://github.com/denkiwakame/academic-project-template
+  code: https://github.com/Yangr116/VST
   # video: https://www.youtube.com/embed/onbnb_D1wC8?si=xJczUv716Lt5aO4l&amp;start=1150
   # demo: https://colab.research.google.com/
   huggingface: https://huggingface.co/
